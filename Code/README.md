@@ -168,14 +168,9 @@ Une liste de paramètre et de fonctionnalités s'affichent. Dans l'ordre nous al
 | Vout adjustment  | Inchangé  |
 | Iout adjustment  | Inchangé  |
 
+5. ```6. Choose schedule script```tapez 6 puis tapez le chiffre qui correspond au script ```agrocam_schedule.wpi``` ici c'est 1. Maintenant il devrait être écrit la prochaine date à laquelle l'Agrocam va démarrer à la ligne 5 des paramètres de la carte WittyPi. Si vous faites l'étape précédente à 12h. L'Agrocam démarrera pour la première fois le lendemain à 12h. Si vous la faites après 12h, l'Agrocam démarrera le surlendemain à la même heure.
+
 6. ```13. Exit``` taper 13 et entrer
-
-## 3.5 Lancer le planning d'allumage
-Rouvrir wittyPi ```sudo ./wittypi/wittyPi.sh```. Puis tapez 6 pour ```6. Choose schedule script```puis tapez le chiffre qui correspond au script ```agrocam_schedule.wpi``` ici c'est 1.
-
-Maintenant il devrait être écrit la prochaine date à laquelle l'Agrocam va démarrer à la ligne 5 des paramètres de la carte WittyPi. Si vous faites l'étape précédente à 12h. L'Agrocam démarrera pour la première fois le lendemain à 12h. Si vous la faites après 12h, l'Agrocam démarrera le surlendemain à la même heure.
-
-Puis quittez wittyPi : ```13. Exit``` taper 13 et entrer
 
 # 4 Démarrer le script au reboot
 Cette partie permet de démarrer le script ```Agrocam_raspberry.sh``` au démarrage. Attention, le script éteint le raspberry à la fin de son exécution. Cette extinction n'a pas lieu si ```controlPin==1```, il faut donc brancher le GPIO 24 au 3,3v pour que l'Agrocam reste allumée _cf. partie 7._

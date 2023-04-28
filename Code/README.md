@@ -137,6 +137,10 @@ Les broches s'emboitent de la manière suivante.
 
 <img src="https://user-images.githubusercontent.com/93132152/197517482-6a5a1459-3894-4c51-946a-7dcf6b49754d.jpg" width=30% height=30%>
 
+## 3.3 Verser le planning d'allumage
+Pour savoir à quelle heure démarrer, la carte WittyPi a besoin du script ```agrocam_schedule.wpi```. La version disponible sur le repository permet de déclencher l'allumage du raspberry à 11h (heure d'hiver, 12h en été) chaque jour. Si vous souhaitez modifier le planning d'allumage et savoir comment modifier le script, référez vous à la [documentation de la carte WittyPi 4](https://www.uugear.com/doc/WittyPi4_UserManual.pdf).
+
+Le script doit être déposé dans le dossier (à l'aide de WinSCP par exemple) /home/pi/wittypi/schedules.
 
 ## 3.4 Paramétrer le WittyPi
 Brancher l'alimentation électrique directement sur la carte Witty Pi (l'alimentation du raspberry a été débranché en 2.1), c'est cette carte qui va ensuite gérer l'alimentation du raspberry. Pour que le raspberry démarre (en attendant qu'on lui donne un planing de mise en route), il faut appuyer sur le bouton poussoir de la carte Witty Pi. Lors de cette première mise en route, il est possible que le Dongle 4G ne s'allume pas. Il suffit de le débrancher et rebrancher.
@@ -166,12 +170,7 @@ Une liste de paramètre et de fonctionnalités s'affichent. Dans l'ordre nous al
 
 6. ```13. Exit``` taper 13 et entrer
 
-## 3.5 Verser le planning d'allumage
-Pour savoir à quelle heure démarrer, la carte WittyPi a besoin du script ```agrocam_schedule.wpi```. La version disponible sur le repository permet de déclencher l'allumage du raspberry à 11h (heure d'hiver, 12h en été) chaque jour. Si vous souhaitez modifier le planning d'allumage et savoir comment modifier le script, référez vous à la [documentation de la carte WittyPi 4](https://www.uugear.com/doc/WittyPi4_UserManual.pdf).
-
-Le script doit être déposé dans le dossier (à l'aide de WinSCP par exemple) /home/pi/wittypi/schedules.
-
-## 3.6 Lancer le planning d'allumage
+## 3.5 Lancer le planning d'allumage
 Rouvrir wittyPi ```sudo ./wittypi/wittyPi.sh```. Puis tapez 6 pour ```6. Choose schedule script```puis tapez le chiffre qui correspond au script ```agrocam_schedule.wpi``` ici c'est 1.
 
 Maintenant il devrait être écrit la prochaine date à laquelle l'Agrocam va démarrer à la ligne 5 des paramètres de la carte WittyPi. Si vous faites l'étape précédente à 12h. L'Agrocam démarrera pour la première fois le lendemain à 12h. Si vous la faites après 12h, l'Agrocam démarrera le surlendemain à la même heure.
